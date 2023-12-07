@@ -37,7 +37,7 @@ if button:
 	if button2:
 		mask = df.applymap(lambda x: search_word.lower() in str(x).lower()).any(axis=1)
 		filtered_df = df[mask]
-		st.write(mask)
+		st.dataframe(filtered_df)
 	else:
 		filtered_df = df
 		st.dataframe(filtered_df)

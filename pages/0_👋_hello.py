@@ -27,7 +27,7 @@ if button:
 	
         
         
-	for submission in subreddit.hot(limit=limit):
+	for submission in subreddit.hot(limit=int(limit)):
 		posts_dict["Title"].append(submission.title)
 		posts_dict["Post Text"].append(submission.selftext)
 		posts_dict["ID"].append(submission.id)

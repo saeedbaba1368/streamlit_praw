@@ -53,5 +53,5 @@ if button:
             comment_str = ';'.join(comments)
 
             writer.writerow([title, selftext, comment_str])
+	    st.write(posts_dict)
 
-st.write(posts_dict)

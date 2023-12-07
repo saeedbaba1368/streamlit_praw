@@ -17,11 +17,12 @@ if button:
 	
 	st.success(f'Welcome to the reddit scraper for , {name} topic!')
 	subreddit = reddit.subreddit(name)
-	
-        
-        posts_dict = {"Title": [], "Post Text": [],
+	posts_dict = {"Title": [], "Post Text": [],
           "ID": [], "Score": [],
           "Total Comments": [], "Post URL": []}
+	
+        
+        
 	for submission in subreddit.hot(limit=3):
 		posts_dict["Title"].append(submission.title)
 

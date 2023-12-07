@@ -48,6 +48,7 @@ if button:
 
     # Search input
     	search_word = st.text_input('Enter a search word:')
+	st.write(search_word)
 	
     	button2 = st.button("click to filter")
     # Filter the dataframe if a search word is entered

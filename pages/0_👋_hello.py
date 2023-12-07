@@ -46,6 +46,7 @@ if button:
 		filtered_df = df[mask]
 		st.dataframe(filtered_df)
 		time.sleep(60)
+		st.success('Success message')
 	else:
 		filtered_df = df
 		st.dataframe(posts_dict)

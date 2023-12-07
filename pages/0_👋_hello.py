@@ -40,15 +40,15 @@ if button:
       posts_dict["Post URL"].append(submission.url)
       
     df = pd.DataFrame(posts_dict) 
-
-st.header('Filtered Dataframe')
-
-# Add a multiselect widget to filter the dataframe
-selected_titles = st.multiselect('Filter by Title', df['Title'].unique())
-
-# Filter the dataframe
-filtered_df = df[df['Title'].isin(selected_titles)]
-
-# Display the filtered dataframe
-st.dataframe(filtered_df)
+	
+    st.header('Filtered Dataframe')
+	
+	# Add a multiselect widget to filter the dataframe
+    selected_titles = st.multiselect('Filter by Title', df['Title'].unique())
+	
+	# Filter the dataframe
+    filtered_df = df[df['Title'].isin(selected_titles)]
+	
+	# Display the filtered dataframe
+    st.dataframe(filtered_df)
 

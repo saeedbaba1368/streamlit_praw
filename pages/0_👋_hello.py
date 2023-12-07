@@ -16,7 +16,9 @@ button = st.button("click to start process")
 if button:
 	
 	st.success(f'Welcome to the reddit scraper for , {name} topic!')
-        subreddit = reddit.subreddit(name)
+	subreddit = reddit.subreddit(name)
+	
+        
         posts_dict = {"Title": [], "Post Text": [],
           "ID": [], "Score": [],
           "Total Comments": [], "Post URL": []}

@@ -31,16 +31,10 @@ if button:
 		posts_dict["Total Comments"].append(submission.num_comments)
 		posts_dict["Post URL"].append(submission.url)
 	df = pd.DataFrame(posts_dict) 
-	
-    	st.title('Reddit Posts Search Filter')
-
-    # Search input
-    	search_word = st.text_input('Enter a search word:')
-	
-	
-    	button2 = st.button("click to filter")
-    # Filter the dataframe if a search word is entered
-    	if button2:
+	st.title('Reddit Posts Search Filter')
+	search_word = st.text_input('Enter a search word:')
+	button2 = st.button("click to filter")
+	if button2:
 		mask = df.applymap(lambda x: search_word.lower() in str(x).lower()).any(axis=1)
 		filtered_df = df[mask]
 		st.write(mask)

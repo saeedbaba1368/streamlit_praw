@@ -61,6 +61,7 @@ if button2:
     else:
         # If no search word is entered, display the original dataframe
         filtered_df = df
+	    st.dataframe(filtered_df)
 
     # Display the filtered dataframe
-    st.dataframe(filtered_df)
+    

@@ -38,20 +38,6 @@ if button:
 
       # URL of each post
       posts_dict["Post URL"].append(submission.url)
-      with open('bookrec_submissions.csv', 'w', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        writer.writerow(['Title', 'Selftext', 'Comments'])
-
-        for submission in subreddit.hot(limit=50):
-            title = submission.title
-            selftext = submission.selftext
-
-            comments = []
-            submission.comments.replace_more(limit=0)
-            for comment in submission.comments.list():
-                comments.append(comment.body)
-            comment_str = ';'.join(comments)
-
-            writer.writerow([title, selftext, comment_str])
-	    st.write(posts_dict)
+      
+st.write(posts_dict)
 

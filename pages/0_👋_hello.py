@@ -41,8 +41,8 @@ if button:
         
         
 
-	df = pd.DataFrame(posts_dict)
-	st.dataframe(posts_dict)
+	
+	st.dataframe(df)
 	
 	st.title('Reddit Posts Search Filter')
 	search_word = st.text_input('Enter a search word:')

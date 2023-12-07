@@ -5,6 +5,7 @@ import streamlit as st
 import praw
 import pandas as pd
 import csv
+import time
 from praw.models import MoreComments
 reddit = praw.Reddit(client_id=client_id,
 	             client_secret=client_secret,	
@@ -44,6 +45,7 @@ if button:
 		mask = df.applymap(lambda x: search_word.lower() in str(x).lower()).any(axis=1)
 		filtered_df = df[mask]
 		st.dataframe(filtered_df)
+		time.sleep(60)
 	else:
 		filtered_df = df
 		st.dataframe(posts_dict)

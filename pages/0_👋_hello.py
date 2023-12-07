@@ -35,7 +35,7 @@ if button:
 		posts_dict["Total Comments"].append(submission.num_comments)
 		posts_dict["Post URL"].append(submission.url)
 	df = pd.DataFrame(posts_dict)
-	st.DataFrame(posts_dict)
+	st.dataframe(posts_dict)
 	
 	st.title('Reddit Posts Search Filter')
 	search_word = st.text_input('Enter a search word:')

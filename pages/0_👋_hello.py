@@ -25,27 +25,16 @@ if button:
         
 	for submission in subreddit.hot(limit=3):
 		posts_dict["Title"].append(submission.title)
+		posts_dict["Post Text"].append(submission.selftext)
+		posts_dict["ID"].append(submission.id)
+		posts_dict["Score"].append(submission.score)
+		posts_dict["Total Comments"].append(submission.num_comments)
+		posts_dict["Post URL"].append(submission.url)
 
-      # Text inside a post
-      		posts_dict["Post Text"].append(submission.selftext)
-
-      # Unique ID of each post
-      		posts_dict["ID"].append(submission.id)
-
-      # The score of a post
-      		posts_dict["Score"].append(submission.score)
-
-      # Total number of comments inside the post
-      		posts_dict["Total Comments"].append(submission.num_comments)
-
-      # URL of each post
-      		posts_dict["Post URL"].append(submission.url)
-		
-      # Title of each post
-      
+ 
 	
     
-      
+
     	df = pd.DataFrame(posts_dict) 
 	
     	st.title('Reddit Posts Search Filter')

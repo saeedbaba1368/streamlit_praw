@@ -30,12 +30,7 @@ if button:
 		posts_dict["Score"].append(submission.score)
 		posts_dict["Total Comments"].append(submission.num_comments)
 		posts_dict["Post URL"].append(submission.url)
-
- 
-	
-    
-
-    	df = pd.DataFrame(posts_dict) 
+	df = pd.DataFrame(posts_dict) 
 	
     	st.title('Reddit Posts Search Filter')
 

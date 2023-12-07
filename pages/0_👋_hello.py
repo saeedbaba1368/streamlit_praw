@@ -34,7 +34,7 @@ with col2:
 button = st.button("click to start process")
 if button:
 	
-	st.success(f'Welcome to the reddit scraper for , {name} topic!')
+	st.success(f'Welcome to the reddit scraper for , {topic} topic!')
 	df = get_reddit_data(topic,limit)
 
 	

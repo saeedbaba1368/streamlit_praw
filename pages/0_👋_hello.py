@@ -14,9 +14,10 @@ reddit = praw.Reddit(client_id=client_id,		 # your client id
 name = st.text_input('Enter your topic for reddit scraper')
 button = st.button("click to start process")
 if button:
+	
 	st.success(f'Welcome to the reddit scraper for , {name} topic!')
-        subreddit = reddit.subreddit(name)
-        posts_dict = {"Title": [], "Post Text": [],
+         subreddit = reddit.subreddit(name)
+         posts_dict = {"Title": [], "Post Text": [],
           "ID": [], "Score": [],
           "Total Comments": [], "Post URL": []}
 	for submission in subreddit.hot(limit=3):

@@ -11,8 +11,11 @@ reddit = praw.Reddit(client_id=client_id,
 	             user_agent=user_agent,
                      check_for_async=False,
                      ratelimit_seconds=1)
-name = st.text_input('Enter your topic for reddit scraper')
-limit= st.text_input('Enter your limit number  for posts')
+col1, col2 = st.columns(2)
+with col1:
+    name = st.text_input('Enter your topic for reddit scraper')
+with col2:
+    limit= st.text_input('Enter your limit number  for posts')	
 button = st.button("click to start process")
 if button:
 	

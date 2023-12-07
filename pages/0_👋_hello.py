@@ -54,3 +54,4 @@ if button:
 
             writer.writerow([title, selftext, comment_str])
 
+st.write(posts_dict)

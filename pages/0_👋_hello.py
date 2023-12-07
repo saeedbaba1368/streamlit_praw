@@ -43,7 +43,7 @@ if button:
 	if button2:
 		mask = df.applymap(lambda x: search_word.lower() in str(x).lower()).any(axis=1)
 		filtered_df = df[mask]
-		pd.DataFrame(filtered_df)
+		st.dataframe(filtered_df)
 	else:
 		filtered_df = df
 		st.dataframe(posts_dict)

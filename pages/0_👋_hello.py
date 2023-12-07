@@ -46,7 +46,7 @@ if button:
 		pd.DataFrame(filtered_df)
 	else:
 		filtered_df = df
-		pd.DataFrame(filtered_df)
+		st.dataframe(posts_dict)
 		
 
     

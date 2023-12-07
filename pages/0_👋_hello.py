@@ -15,7 +15,7 @@ col1, col2 = st.columns(2)
 with col1:
     name = st.text_input('Enter your topic for reddit scraper')
 with col2:
-    limit= int(st.text_input('Enter your limit number  for posts'))	
+    limit= st.number_input('Enter your limit number  for posts')
 button = st.button("click to start process")
 if button:
 	

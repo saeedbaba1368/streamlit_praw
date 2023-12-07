@@ -12,8 +12,8 @@ reddit = praw.Reddit(client_id=client_id,		 # your client id
               check_for_async=False,
               ratelimit_seconds=1)	 # your user agen
 name = st.text_input('Enter your topic for reddit scraper')
-button = st.button("click to start process")
-if button:
+button2 = st.button("click to start process")
+if button2:
     st.success(f'Welcome to the reddit scraper for , {name} topic!')
     subreddit = reddit.subreddit(name)
     posts_dict = {"Title": [], "Post Text": [],

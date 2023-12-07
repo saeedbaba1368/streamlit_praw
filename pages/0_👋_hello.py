@@ -41,15 +41,21 @@ if button:
 	st.title('Reddit Posts Search Filter')
 	search_word = st.text_input('Enter a search word:')
 	button2 = st.button("click to filter")
-	if button2:
-		mask = df.applymap(lambda x: search_word.lower() in str(x).lower()).any(axis=1)
-		filtered_df = df[mask]
-		st.dataframe(filtered_df)
-		time.sleep(60)
-		st.success('Success message')
-	else:
-		filtered_df = df
-		st.dataframe(posts_dict)
+elif button2:
+	mask = df.applymap(lambda x: search_word.lower() in str(x).lower()).any(axis=1)
+	filtered_df = df[mask]
+	st.dataframe(filtered_df)
+	time.sleep(60)
+	st.success('Success message')
+	
+		
+		
+else:
+	filtered_df = df
+	st.dataframe(posts_dict)
+	
+		
+		
 		
 
     

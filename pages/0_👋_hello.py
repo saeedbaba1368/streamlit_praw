@@ -41,14 +41,20 @@ if button:
       
     df = pd.DataFrame(posts_dict) 
 	
-    st.header('Filtered Dataframe')
-	
-	# Add a multiselect widget to filter the dataframe
-    selected_titles = st.multiselect('Filter by Title', df['Title'].unique())
-	
-	# Filter the dataframe
-    filtered_df = df[df['Title'].isin(selected_titles)]
-	
-	# Display the filtered dataframe
-    st.dataframe(filtered_df)
+    st.title('Reddit Posts Search Filter')
 
+    # Search input
+    search_word = st.text_input('Enter a search word:')
+    
+    # Filter the dataframe if a search word is entered
+    if search_word:
+        # Use .applymap() to apply the search function to each cell of the DataFrame
+        # and .any(axis=1) to check if any cell in a row contains the search word
+        mask = df.applymap(lambda x: search_word.lower() in str(x).lower()).any(axis=1)
+        filtered_df = df[mask]
+    else:
+        # If no search word is entered, display the original dataframe
+        filtered_df = df
+
+    # Display the filtered dataframe
+    st.dataframe(filtered_df)

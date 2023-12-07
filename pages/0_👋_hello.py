@@ -52,7 +52,7 @@ if button2:
         # Use .applymap() to apply the search function to each cell of the DataFrame
         # and .any(axis=1) to check if any cell in a row contains the search word
          mask = df.applymap(lambda x: search_word.lower() in str(x).lower()).any(axis=1)
-	  st.write(mask)
+	  #st.write(mask)
           filtered_df = df[mask]
     else:
         # If no search word is entered, display the original dataframe

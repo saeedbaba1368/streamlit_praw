@@ -39,5 +39,5 @@ if button:
       # URL of each post
       posts_dict["Post URL"].append(submission.url)
       
-      st.dataframe(posts_dict)
+   st.dataframe(posts_dict)
 

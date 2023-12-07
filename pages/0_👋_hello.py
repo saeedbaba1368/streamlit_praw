@@ -59,9 +59,12 @@ if button2:
 	  #
           
     else:
-        # If no search word is entered, display the original dataframe
-        filtered_df = df
+	    filtered_df = df
 	    st.dataframe(filtered_df)
+	    
+        # If no search word is entered, display the original dataframe
+        
+	    
 
     # Display the filtered dataframe
     

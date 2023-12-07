@@ -12,6 +12,7 @@ reddit = praw.Reddit(client_id=client_id,
                      check_for_async=False,
                      ratelimit_seconds=1)
 name = st.text_input('Enter your topic for reddit scraper')
+limit= st.text_input('Enter your limit number  for posts')
 button = st.button("click to start process")
 if button:
 	
@@ -23,7 +24,7 @@ if button:
 	
         
         
-	for submission in subreddit.hot(limit=3):
+	for submission in subreddit.hot(limit=limit):
 		posts_dict["Title"].append(submission.title)
 		posts_dict["Post Text"].append(submission.selftext)
 		posts_dict["ID"].append(submission.id)

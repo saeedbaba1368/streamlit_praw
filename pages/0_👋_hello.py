@@ -45,9 +45,9 @@ if button:
 
     # Search input
     search_word = st.text_input('Enter a search word:')
-    
+    button = st.button("click to filter")
     # Filter the dataframe if a search word is entered
-    if search_word:
+    if button:
         # Use .applymap() to apply the search function to each cell of the DataFrame
         # and .any(axis=1) to check if any cell in a row contains the search word
         mask = df.applymap(lambda x: search_word.lower() in str(x).lower()).any(axis=1)

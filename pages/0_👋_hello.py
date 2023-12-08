@@ -55,7 +55,7 @@ if button:
 	            st.dataframe(filtered_df)
 	        else:
 	            st.error("Please enter a search word to filter.")
-    	else:
+	else:
 		st.dataframe(df)
 else:
 	pass

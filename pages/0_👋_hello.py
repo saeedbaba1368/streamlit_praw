@@ -57,8 +57,8 @@ if button:
 	            st.error("Please enter a search word to filter.")
     	else:
 		st.dataframe(df)
-		
-	    
+else:
+	pass
 	    
         
 	

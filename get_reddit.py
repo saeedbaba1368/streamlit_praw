@@ -11,5 +11,5 @@ def get_reddit():
                     user_agent=user_agent,
                         check_for_async=False,
                         ratelimit_seconds=5)
-    print(user_agent)
+    
     return reddit

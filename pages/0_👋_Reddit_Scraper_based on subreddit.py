@@ -14,7 +14,7 @@ with col1:
 with col2:
     limit= st.number_input('Number Filter', min_value=0, max_value=100, value=4, step=1)
 with col3:
-    attr=st.selectbox('Sort By:', ('top', 'hot', 'rising', 'new',"controversial","gilded"))
+    attr=st.selectbox('Sort By:', ('top', 'hot', 'rising', 'new',"controversial"))
 with col4:
     time_filter=st.selectbox('Time Filter:', ("hour","day",'week', 'month', 'year', 'all'))
     

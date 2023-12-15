@@ -29,15 +29,23 @@ def get_submission_data_by_id(submission_id,reddit):
     submission.comments.replace_more(limit=None)  # This line may take some time
     comments_data = []
     for comment in submission.comments.list():
-        comments_data.append({
-            'author': str(comment.author),
-            'body': comment.body,
-            'created_utc': comment.created_utc,
-            'score': comment.score,
-            'parent_id': comment.parent_id,
-            'is_submitter': comment.is_submitter,
-            'submission_id': submission_id,
-        })
+        
+        
+            comments_data.append({
+                'author': str(comment.author),
+                'body': comment.body,
+                'created_utc': comment.created_utc,
+                'score': comment.score,
+                'parent_id': comment.parent_id,
+                'is_submitter': comment.is_submitter,
+                'submission_id': submission_id,
+                
+            })
+            for reply in comment.replies:
+                comments_data.append({
+                    "comments_reply": reply.body})
+                    
+                
 
     # Create a DataFrame for the comments
     df_comments = pd.DataFrame(comments_data)
